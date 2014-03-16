@@ -10,7 +10,7 @@
 
 @interface DADetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end
