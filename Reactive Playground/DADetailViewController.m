@@ -36,7 +36,16 @@
         return [valid boolValue] ? [UIColor clearColor] : [UIColor yellowColor];
     }];
     
+    RACSignal *signUpActiveSignal =
+        [RACSignal
+         combineLatest:@[validUsernameSignal, validPasswordSignal]
+         reduce:^id(NSNumber *usernameValid, NSNumber *passwordValid) {
+             return @(usernameValid.boolValue && passwordValid.boolValue);
+         }];
     
+    RAC(self.loginButton, enabled) = [signUpActiveSignal map:^id(NSNumber *valid) {
+        return @(valid.boolValue);
+    }];
 }
 
 - (void)didReceiveMemoryWarning
