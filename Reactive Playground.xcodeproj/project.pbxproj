@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BDD518718D60EEA009DE3DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518618D60EEA009DE3DF /* Foundation.framework */; };
+		1BDD518918D60EEA009DE3DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518818D60EEA009DE3DF /* CoreGraphics.framework */; };
+		1BDD518B18D60EEA009DE3DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518A18D60EEA009DE3DF /* UIKit.framework */; };
+		1BDD519118D60EEA009DE3DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BDD518F18D60EEA009DE3DF /* InfoPlist.strings */; };
+		1BDD519318D60EEA009DE3DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD519218D60EEA009DE3DF /* main.m */; };
+		1BDD519718D60EEA009DE3DF /* DAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD519618D60EEA009DE3DF /* DAAppDelegate.m */; };
+		1BDD519A18D60EEA009DE3DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BDD519818D60EEA009DE3DF /* Main.storyboard */; };
+		1BDD519D18D60EEA009DE3DF /* DAMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD519C18D60EEA009DE3DF /* DAMasterViewController.m */; };
+		1BDD51A018D60EEA009DE3DF /* DADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD519F18D60EEA009DE3DF /* DADetailViewController.m */; };
+		1BDD51A218D60EEA009DE3DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDD51A118D60EEA009DE3DF /* Images.xcassets */; };
+		1BDD51A918D60EEA009DE3DF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD51A818D60EEA009DE3DF /* XCTest.framework */; };
+		1BDD51AA18D60EEA009DE3DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518618D60EEA009DE3DF /* Foundation.framework */; };
+		1BDD51AB18D60EEA009DE3DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518A18D60EEA009DE3DF /* UIKit.framework */; };
+		1BDD51B318D60EEA009DE3DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BDD51B118D60EEA009DE3DF /* InfoPlist.strings */; };
+		1BDD51B518D60EEA009DE3DF /* Reactive_PlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD51B418D60EEA009DE3DF /* Reactive_PlaygroundTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BDD51AC18D60EEA009DE3DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BDD517B18D60EEA009DE3DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BDD518218D60EEA009DE3DF;
+			remoteInfo = "Reactive Playground";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1BDD518318D60EEA009DE3DF /* Reactive Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reactive Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BDD518618D60EEA009DE3DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1BDD518818D60EEA009DE3DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1BDD518A18D60EEA009DE3DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1BDD518E18D60EEA009DE3DF /* Reactive Playground-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reactive Playground-Info.plist"; sourceTree = "<group>"; };
+		1BDD519018D60EEA009DE3DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1BDD519218D60EEA009DE3DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1BDD519418D60EEA009DE3DF /* Reactive Playground-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reactive Playground-Prefix.pch"; sourceTree = "<group>"; };
+		1BDD519518D60EEA009DE3DF /* DAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAAppDelegate.h; sourceTree = "<group>"; };
+		1BDD519618D60EEA009DE3DF /* DAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DAAppDelegate.m; sourceTree = "<group>"; };
+		1BDD519918D60EEA009DE3DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1BDD519B18D60EEA009DE3DF /* DAMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAMasterViewController.h; sourceTree = "<group>"; };
+		1BDD519C18D60EEA009DE3DF /* DAMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DAMasterViewController.m; sourceTree = "<group>"; };
+		1BDD519E18D60EEA009DE3DF /* DADetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DADetailViewController.h; sourceTree = "<group>"; };
+		1BDD519F18D60EEA009DE3DF /* DADetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DADetailViewController.m; sourceTree = "<group>"; };
+		1BDD51A118D60EEA009DE3DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1BDD51A718D60EEA009DE3DF /* Reactive PlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reactive PlaygroundTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BDD51A818D60EEA009DE3DF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1BDD51B018D60EEA009DE3DF /* Reactive PlaygroundTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reactive PlaygroundTests-Info.plist"; sourceTree = "<group>"; };
+		1BDD51B218D60EEA009DE3DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1BDD51B418D60EEA009DE3DF /* Reactive_PlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reactive_PlaygroundTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BDD518018D60EEA009DE3DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BDD518918D60EEA009DE3DF /* CoreGraphics.framework in Frameworks */,
+				1BDD518B18D60EEA009DE3DF /* UIKit.framework in Frameworks */,
+				1BDD518718D60EEA009DE3DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BDD51A418D60EEA009DE3DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BDD51A918D60EEA009DE3DF /* XCTest.framework in Frameworks */,
+				1BDD51AB18D60EEA009DE3DF /* UIKit.framework in Frameworks */,
+				1BDD51AA18D60EEA009DE3DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BDD517A18D60EEA009DE3DF = {
+			isa = PBXGroup;
+			children = (
+				1BDD518C18D60EEA009DE3DF /* Reactive Playground */,
+				1BDD51AE18D60EEA009DE3DF /* Reactive PlaygroundTests */,
+				1BDD518518D60EEA009DE3DF /* Frameworks */,
+				1BDD518418D60EEA009DE3DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BDD518418D60EEA009DE3DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BDD518318D60EEA009DE3DF /* Reactive Playground.app */,
+				1BDD51A718D60EEA009DE3DF /* Reactive PlaygroundTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BDD518518D60EEA009DE3DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BDD518618D60EEA009DE3DF /* Foundation.framework */,
+				1BDD518818D60EEA009DE3DF /* CoreGraphics.framework */,
+				1BDD518A18D60EEA009DE3DF /* UIKit.framework */,
+				1BDD51A818D60EEA009DE3DF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1BDD518C18D60EEA009DE3DF /* Reactive Playground */ = {
+			isa = PBXGroup;
+			children = (
+				1BDD519518D60EEA009DE3DF /* DAAppDelegate.h */,
+				1BDD519618D60EEA009DE3DF /* DAAppDelegate.m */,
+				1BDD519818D60EEA009DE3DF /* Main.storyboard */,
+				1BDD519B18D60EEA009DE3DF /* DAMasterViewController.h */,
+				1BDD519C18D60EEA009DE3DF /* DAMasterViewController.m */,
+				1BDD519E18D60EEA009DE3DF /* DADetailViewController.h */,
+				1BDD519F18D60EEA009DE3DF /* DADetailViewController.m */,
+				1BDD51A118D60EEA009DE3DF /* Images.xcassets */,
+				1BDD518D18D60EEA009DE3DF /* Supporting Files */,
+			);
+			path = "Reactive Playground";
+			sourceTree = "<group>";
+		};
+		1BDD518D18D60EEA009DE3DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BDD518E18D60EEA009DE3DF /* Reactive Playground-Info.plist */,
+				1BDD518F18D60EEA009DE3DF /* InfoPlist.strings */,
+				1BDD519218D60EEA009DE3DF /* main.m */,
+				1BDD519418D60EEA009DE3DF /* Reactive Playground-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BDD51AE18D60EEA009DE3DF /* Reactive PlaygroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				1BDD51B418D60EEA009DE3DF /* Reactive_PlaygroundTests.m */,
+				1BDD51AF18D60EEA009DE3DF /* Supporting Files */,
+			);
+			path = "Reactive PlaygroundTests";
+			sourceTree = "<group>";
+		};
+		1BDD51AF18D60EEA009DE3DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BDD51B018D60EEA009DE3DF /* Reactive PlaygroundTests-Info.plist */,
+				1BDD51B118D60EEA009DE3DF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BDD518218D60EEA009DE3DF /* Reactive Playground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BDD51B818D60EEA009DE3DF /* Build configuration list for PBXNativeTarget "Reactive Playground" */;
+			buildPhases = (
+				1BDD517F18D60EEA009DE3DF /* Sources */,
+				1BDD518018D60EEA009DE3DF /* Frameworks */,
+				1BDD518118D60EEA009DE3DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reactive Playground";
+			productName = "Reactive Playground";
+			productReference = 1BDD518318D60EEA009DE3DF /* Reactive Playground.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1BDD51A618D60EEA009DE3DF /* Reactive PlaygroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BDD51BB18D60EEA009DE3DF /* Build configuration list for PBXNativeTarget "Reactive PlaygroundTests" */;
+			buildPhases = (
+				1BDD51A318D60EEA009DE3DF /* Sources */,
+				1BDD51A418D60EEA009DE3DF /* Frameworks */,
+				1BDD51A518D60EEA009DE3DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BDD51AD18D60EEA009DE3DF /* PBXTargetDependency */,
+			);
+			name = "Reactive PlaygroundTests";
+			productName = "Reactive PlaygroundTests";
+			productReference = 1BDD51A718D60EEA009DE3DF /* Reactive PlaygroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BDD517B18D60EEA009DE3DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DA;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Darmen Amanbayev";
+				TargetAttributes = {
+					1BDD51A618D60EEA009DE3DF = {
+						TestTargetID = 1BDD518218D60EEA009DE3DF;
+					};
+				};
+			};
+			buildConfigurationList = 1BDD517E18D60EEA009DE3DF /* Build configuration list for PBXProject "Reactive Playground" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BDD517A18D60EEA009DE3DF;
+			productRefGroup = 1BDD518418D60EEA009DE3DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BDD518218D60EEA009DE3DF /* Reactive Playground */,
+				1BDD51A618D60EEA009DE3DF /* Reactive PlaygroundTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BDD518118D60EEA009DE3DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BDD51A218D60EEA009DE3DF /* Images.xcassets in Resources */,
+				1BDD519118D60EEA009DE3DF /* InfoPlist.strings in Resources */,
+				1BDD519A18D60EEA009DE3DF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BDD51A518D60EEA009DE3DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BDD51B318D60EEA009DE3DF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BDD517F18D60EEA009DE3DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BDD519318D60EEA009DE3DF /* main.m in Sources */,
+				1BDD519718D60EEA009DE3DF /* DAAppDelegate.m in Sources */,
+				1BDD51A018D60EEA009DE3DF /* DADetailViewController.m in Sources */,
+				1BDD519D18D60EEA009DE3DF /* DAMasterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BDD51A318D60EEA009DE3DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BDD51B518D60EEA009DE3DF /* Reactive_PlaygroundTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BDD51AD18D60EEA009DE3DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BDD518218D60EEA009DE3DF /* Reactive Playground */;
+			targetProxy = 1BDD51AC18D60EEA009DE3DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1BDD518F18D60EEA009DE3DF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BDD519018D60EEA009DE3DF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1BDD519818D60EEA009DE3DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BDD519918D60EEA009DE3DF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1BDD51B118D60EEA009DE3DF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BDD51B218D60EEA009DE3DF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1BDD51B618D60EEA009DE3DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1BDD51B718D60EEA009DE3DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BDD51B918D60EEA009DE3DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reactive Playground/Reactive Playground-Prefix.pch";
+				INFOPLIST_FILE = "Reactive Playground/Reactive Playground-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1BDD51BA18D60EEA009DE3DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reactive Playground/Reactive Playground-Prefix.pch";
+				INFOPLIST_FILE = "Reactive Playground/Reactive Playground-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1BDD51BC18D60EEA009DE3DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reactive Playground.app/Reactive Playground";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reactive Playground/Reactive Playground-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Reactive PlaygroundTests/Reactive PlaygroundTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1BDD51BD18D60EEA009DE3DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reactive Playground.app/Reactive Playground";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reactive Playground/Reactive Playground-Prefix.pch";
+				INFOPLIST_FILE = "Reactive PlaygroundTests/Reactive PlaygroundTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BDD517E18D60EEA009DE3DF /* Build configuration list for PBXProject "Reactive Playground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BDD51B618D60EEA009DE3DF /* Debug */,
+				1BDD51B718D60EEA009DE3DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BDD51B818D60EEA009DE3DF /* Build configuration list for PBXNativeTarget "Reactive Playground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BDD51B918D60EEA009DE3DF /* Debug */,
+				1BDD51BA18D60EEA009DE3DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1BDD51BB18D60EEA009DE3DF /* Build configuration list for PBXNativeTarget "Reactive PlaygroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BDD51BC18D60EEA009DE3DF /* Debug */,
+				1BDD51BD18D60EEA009DE3DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BDD517B18D60EEA009DE3DF /* Project object */;
+}
