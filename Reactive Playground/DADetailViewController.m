@@ -9,6 +9,8 @@
 #import "DADetailViewController.h"
 
 @interface DADetailViewController ()
+- (BOOL)isValidUsername:(NSString *)username;
+- (BOOL)isValidPassword:(NSString *)password;
 @end
 
 @implementation DADetailViewController
@@ -16,15 +18,39 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    RACSignal *validUsernameSignal = [self.usernameTextField.rac_textSignal
+                                      map:^id(NSString *text) {
+                                          return @([self isValidUsername:text]);
+                                      }];
     
-    [self.usernameTextField.rac_textSignal subscribeNext:^(id x){
-        DLog(@"%@", x);
+    RACSignal *validPasswordSignal = [self.passwordTextField.rac_textSignal
+                                      map:^id(NSString *text) {
+                                          return @([self isValidPassword:text]);
+                                      }];
+    
+    RAC(self.passwordTextField, backgroundColor) = [validPasswordSignal map:^id(NSNumber *valid) {
+        return [valid boolValue] ? [UIColor clearColor] : [UIColor yellowColor];
     }];
+    
+    RAC(self.usernameTextField, backgroundColor) = [validUsernameSignal map:^id(NSNumber *valid) {
+        return [valid boolValue] ? [UIColor clearColor] : [UIColor yellowColor];
+    }];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (BOOL)isValidUsername:(NSString *)username
+{
+    return [username isEqualToString:@"user"];
+}
+- (BOOL)isValidPassword:(NSString *)password
+{
+    return [password isEqualToString:@"password"];
 }
 
 @end
