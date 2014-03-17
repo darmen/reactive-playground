@@ -8,6 +8,8 @@
 
 #import "DATwitterInstantViewControllerTableViewController.h"
 #import "UISearchBar+RAC.h"
+#import "NSArray+LinqExtensions.h"
+#import "DATweet.h"
 
 typedef NS_ENUM(NSInteger, DATwitterInstantError) {
     DATwitterInstantErrorAccessDenied,
@@ -21,6 +23,7 @@ static NSString * const DATwitterInstantDomain = @"TwitterInstant";
 @interface DATwitterInstantViewControllerTableViewController ()
 @property (strong, nonatomic) ACAccountStore *accountStore;
 @property (strong, nonatomic) ACAccountType *twitterAccountType;
+@property (strong, nonatomic) NSArray *tweets;
 @end
 
 @implementation DATwitterInstantViewControllerTableViewController
@@ -67,11 +70,21 @@ static NSString * const DATwitterInstantDomain = @"TwitterInstant";
         return [self signalForSearchWithText:text];
     }]
     deliverOn:[RACScheduler mainThreadScheduler]]
-    subscribeNext:^(id x) {
-        NSLog(@"%@", x);
+    subscribeNext:^(NSDictionary *jsonSearchResult) {
+        NSArray *statuses = jsonSearchResult[@"statuses"];
+        NSArray *tweets = [statuses linq_select:^id(id tweet) {
+            return [DATweet tweetWithStatus:tweet];
+        }];
+        [self displayTweets:tweets];
     } error:^(NSError *error) {
         NSLog(@"An error occured: %@", error);
     }];
+}
+
+- (void)displayTweets:(NSArray *)tweets
+{
+    self.tweets = tweets;
+    [self.tableView reloadData];
 }
 
 - (BOOL)isValidSearchText:(NSString *)text {
@@ -174,28 +187,26 @@ static NSString * const DATwitterInstantDomain = @"TwitterInstant";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.tweets.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    // Configure the cell...
+    DATweet *tweet = self.tweets[indexPath.row];
+    cell.textLabel.text = tweet.status;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"@%@", tweet.username];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

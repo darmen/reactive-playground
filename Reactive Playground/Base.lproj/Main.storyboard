@@ -108,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="1050" y="-97"/>
         </scene>
-        <!--Twitter Instant View Controller Table View Controller-->
+        <!--Twitter Instant View Controller Table View Controller - Twitter Instant-->
         <scene sceneID="wUB-GB-Thf">
             <objects>
                 <tableViewController id="X2T-VH-3J4" customClass="DATwitterInstantViewControllerTableViewController" sceneMemberID="viewController">
@@ -122,12 +122,28 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Zqf-ru-N9J">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="lwy-Zv-3EC" detailTextLabel="Pob-xY-N6p" style="IBUITableViewCellStyleSubtitle" id="Zqf-ru-N9J">
                                 <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zqf-ru-N9J" id="zKN-io-hgc">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lwy-Zv-3EC">
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pob-xY-N6p">
+                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -136,7 +152,7 @@
                             <outlet property="delegate" destination="X2T-VH-3J4" id="sFb-Tb-T6V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4eo-x2-Zwe"/>
+                    <navigationItem key="navigationItem" title="Twitter Instant" id="4eo-x2-Zwe"/>
                     <connections>
                         <outlet property="searchBar" destination="NDK-1y-HSj" id="MKQ-Ug-Sg3"/>
                         <outlet property="searchDisplayController" destination="zUu-BT-LUx" id="rau-G8-Won"/>
