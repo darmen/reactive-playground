@@ -34,12 +34,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [[self.searchBar.rac_textSignal
-    map:^id(NSString *text) {
+    RAC(self.searchBar, barTintColor) = [self.searchBar.rac_textSignal map:^id(NSString *text) {
         return [self isValidSearchText:text] ? [UIColor lightGrayColor] : [UIColor redColor];
-    }]
-    subscribeNext:^(UIColor *color) {
-        self.searchBar.barTintColor = color;
     }];
 }
 
