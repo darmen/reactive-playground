@@ -12,6 +12,7 @@
 		1B8FF6B118D73A640051525C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8FF6B018D73A640051525C /* Accounts.framework */; };
 		1B8FF6B318D73A680051525C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8FF6B218D73A680051525C /* Social.framework */; };
 		1B8FF6B618D75AAE0051525C /* DATweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FF6B518D75AAE0051525C /* DATweet.m */; };
+		1B8FF6B918D75F4F0051525C /* DATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FF6B818D75F4F0051525C /* DATableViewCell.m */; };
 		1BDD518718D60EEA009DE3DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518618D60EEA009DE3DF /* Foundation.framework */; };
 		1BDD518918D60EEA009DE3DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518818D60EEA009DE3DF /* CoreGraphics.framework */; };
 		1BDD518B18D60EEA009DE3DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518A18D60EEA009DE3DF /* UIKit.framework */; };
@@ -50,6 +51,8 @@
 		1B8FF6B218D73A680051525C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1B8FF6B418D75AAE0051525C /* DATweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATweet.h; sourceTree = "<group>"; };
 		1B8FF6B518D75AAE0051525C /* DATweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATweet.m; sourceTree = "<group>"; };
+		1B8FF6B718D75F4F0051525C /* DATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATableViewCell.h; sourceTree = "<group>"; };
+		1B8FF6B818D75F4F0051525C /* DATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATableViewCell.m; sourceTree = "<group>"; };
 		1BDD518318D60EEA009DE3DF /* Reactive Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reactive Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDD518618D60EEA009DE3DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BDD518818D60EEA009DE3DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,6 +158,8 @@
 				1BDD519F18D60EEA009DE3DF /* DADetailViewController.m */,
 				1B8FF6A718D7022C0051525C /* DATwitterInstantViewControllerTableViewController.h */,
 				1B8FF6A818D7022C0051525C /* DATwitterInstantViewControllerTableViewController.m */,
+				1B8FF6B718D75F4F0051525C /* DATableViewCell.h */,
+				1B8FF6B818D75F4F0051525C /* DATableViewCell.m */,
 				1BDD51A118D60EEA009DE3DF /* Images.xcassets */,
 				1BDD518D18D60EEA009DE3DF /* Supporting Files */,
 			);
@@ -336,6 +341,7 @@
 				1BDD519318D60EEA009DE3DF /* main.m in Sources */,
 				1B8FF6B618D75AAE0051525C /* DATweet.m in Sources */,
 				1BDD519718D60EEA009DE3DF /* DAAppDelegate.m in Sources */,
+				1B8FF6B918D75F4F0051525C /* DATableViewCell.m in Sources */,
 				1B8FF6AE18D70BBF0051525C /* UISearchBar+RAC.m in Sources */,
 				1BDD51A018D60EEA009DE3DF /* DADetailViewController.m in Sources */,
 				1BDD519D18D60EEA009DE3DF /* DAMasterViewController.m in Sources */,

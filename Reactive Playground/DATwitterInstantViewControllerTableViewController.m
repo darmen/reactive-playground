@@ -10,6 +10,7 @@
 #import "UISearchBar+RAC.h"
 #import "NSArray+LinqExtensions.h"
 #import "DATweet.h"
+#import "DATableViewCell.h"
 
 typedef NS_ENUM(NSInteger, DATwitterInstantError) {
     DATwitterInstantErrorAccessDenied,
@@ -176,6 +177,19 @@ static NSString * const DATwitterInstantDomain = @"TwitterInstant";
     }];
 }
 
+- (RACSignal *)signalForLoadingImage:(NSString *)imageUrl
+{
+    RACScheduler *scheduler = [RACScheduler schedulerWithPriority:RACSchedulerPriorityBackground];
+    
+    return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+        UIImage *image = [UIImage imageWithData:data];
+        [subscriber sendNext:image];
+        [subscriber sendCompleted];
+        return nil;
+    }] subscribeOn:scheduler];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -198,11 +212,18 @@ static NSString * const DATwitterInstantDomain = @"TwitterInstant";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    DATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
     DATweet *tweet = self.tweets[indexPath.row];
-    cell.textLabel.text = tweet.status;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"@%@", tweet.username];
+    cell.statusLabel.text = tweet.status;
+    cell.usernameLabel.text = [NSString stringWithFormat:@"@%@", tweet.username];
+    
+    cell.avatarImageView.image = nil;
+    [[[self signalForLoadingImage:tweet.profileImageUrl]
+    deliverOn:[RACScheduler mainThreadScheduler]]
+    subscribeNext:^(UIImage *image) {
+        cell.avatarImageView.image = image;
+    }];
     
     return cell;
 }
