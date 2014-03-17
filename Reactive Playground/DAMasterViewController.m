@@ -42,7 +42,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -52,6 +52,10 @@
     switch (indexPath.row) {
         case 0:
             cell.textLabel.text = @"1. Login";
+            break;
+        
+        case 1:
+            cell.textLabel.text = @"2. Twitter Instant";
             break;
             
         default:
@@ -64,5 +68,22 @@
 {
     return NO;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+            [self performSegueWithIdentifier:@"showLoginSegue" sender:nil];
+            break;
+        
+        case 1:
+            [self performSegueWithIdentifier:@"showTwitterInstantSegue" sender:nil];
+            break;
+            
+        default:
+            break;
+    }
+}
+
 
 @end

@@ -45,9 +45,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail1" id="pSF-qd-N3o"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -57,10 +54,33 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz"/>
+                    <connections>
+                        <segue destination="Ah7-4n-0Wa" kind="push" identifier="showLoginSegue" id="dOV-1T-XdS"/>
+                        <segue destination="FCg-EK-Bta" kind="push" identifier="showTwitterInstantSegue" id="3Gj-yQ-9Ri"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="64"/>
+            <point key="canvasLocation" x="491" y="64"/>
+        </scene>
+        <!--View Controller - Twitter Instant-->
+        <scene sceneID="9c7-KO-0wG">
+            <objects>
+                <viewController title="Twitter Instant" id="FCg-EK-Bta" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gck-fd-v4c"/>
+                        <viewControllerLayoutGuide type="bottom" id="JAC-F1-3EK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3r3-Vs-m0y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Twitter Instant" id="bLi-AW-O0S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gqZ-vp-BbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="588"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -105,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="1050" y="-97"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
