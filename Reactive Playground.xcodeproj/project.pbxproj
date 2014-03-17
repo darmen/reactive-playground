@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B8FF6A918D7022C0051525C /* DATwitterInstantViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FF6A818D7022C0051525C /* DATwitterInstantViewControllerTableViewController.m */; };
+		1B8FF6AE18D70BBF0051525C /* UISearchBar+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FF6AD18D70BBF0051525C /* UISearchBar+RAC.m */; };
 		1BDD518718D60EEA009DE3DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518618D60EEA009DE3DF /* Foundation.framework */; };
 		1BDD518918D60EEA009DE3DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518818D60EEA009DE3DF /* CoreGraphics.framework */; };
 		1BDD518B18D60EEA009DE3DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518A18D60EEA009DE3DF /* UIKit.framework */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B8FF6A718D7022C0051525C /* DATwitterInstantViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATwitterInstantViewControllerTableViewController.h; sourceTree = "<group>"; };
+		1B8FF6A818D7022C0051525C /* DATwitterInstantViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATwitterInstantViewControllerTableViewController.m; sourceTree = "<group>"; };
+		1B8FF6AD18D70BBF0051525C /* UISearchBar+RAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+RAC.m"; sourceTree = "<group>"; };
+		1B8FF6AF18D70E1A0051525C /* UISearchBar+RAC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+RAC.h"; sourceTree = "<group>"; };
 		1BDD518318D60EEA009DE3DF /* Reactive Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reactive Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDD518618D60EEA009DE3DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BDD518818D60EEA009DE3DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				1BDD51BE18D627CB009DE3DF /* API */,
+				1B8FF6AF18D70E1A0051525C /* UISearchBar+RAC.h */,
+				1B8FF6AD18D70BBF0051525C /* UISearchBar+RAC.m */,
 				1BDD519518D60EEA009DE3DF /* DAAppDelegate.h */,
 				1BDD519618D60EEA009DE3DF /* DAAppDelegate.m */,
 				1BDD519818D60EEA009DE3DF /* Main.storyboard */,
@@ -132,6 +140,8 @@
 				1BDD519C18D60EEA009DE3DF /* DAMasterViewController.m */,
 				1BDD519E18D60EEA009DE3DF /* DADetailViewController.h */,
 				1BDD519F18D60EEA009DE3DF /* DADetailViewController.m */,
+				1B8FF6A718D7022C0051525C /* DATwitterInstantViewControllerTableViewController.h */,
+				1B8FF6A818D7022C0051525C /* DATwitterInstantViewControllerTableViewController.m */,
 				1BDD51A118D60EEA009DE3DF /* Images.xcassets */,
 				1BDD518D18D60EEA009DE3DF /* Supporting Files */,
 			);
@@ -312,8 +322,10 @@
 				1BDD51C118D627EB009DE3DF /* DADummyService.m in Sources */,
 				1BDD519318D60EEA009DE3DF /* main.m in Sources */,
 				1BDD519718D60EEA009DE3DF /* DAAppDelegate.m in Sources */,
+				1B8FF6AE18D70BBF0051525C /* UISearchBar+RAC.m in Sources */,
 				1BDD51A018D60EEA009DE3DF /* DADetailViewController.m in Sources */,
 				1BDD519D18D60EEA009DE3DF /* DAMasterViewController.m in Sources */,
+				1B8FF6A918D7022C0051525C /* DATwitterInstantViewControllerTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
