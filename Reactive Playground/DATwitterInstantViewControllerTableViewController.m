@@ -51,16 +51,26 @@ static NSString * const DATwitterInstantDomain = @"TwitterInstant";
     RAC(self.searchBar, barTintColor) = [self.searchBar.rac_textSignal map:^id(NSString *text) {
         return [self isValidSearchText:text] ? [UIColor lightGrayColor] : [UIColor redColor];
     }];
-    
-    [[self requestAccessToTwitterSignal] subscribeNext:^(id x) {
-        NSLog(@"Access granted");
+
+    @weakify(self)
+    [[[[self requestAccessToTwitterSignal]
+    then:^RACSignal *{
+        @strongify(self)
+        return self.searchBar.rac_textSignal;
+    }]
+    filter:^BOOL(NSString *text) {
+        @strongify(self)
+        return [self isValidSearchText:text];
+    }]
+    subscribeNext:^(id x) {
+        NSLog(@"%@", x);
     } error:^(NSError *error) {
         NSLog(@"An error occured: %@", error);
     }];
 }
 
 - (BOOL)isValidSearchText:(NSString *)text {
-    return text.length > 2;
+    return text.length > 3;
 }
 
 - (RACSignal *)requestAccessToTwitterSignal {
