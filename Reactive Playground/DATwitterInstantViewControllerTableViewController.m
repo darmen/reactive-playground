@@ -15,14 +15,16 @@ typedef NS_ENUM(NSInteger, DATwitterInstantError) {
     DATwitterInstantErrorInvalidResponse
 };
 
-static NSString * const RWTwitterInstantDomain = @"TwitterInstant";
+static NSString * const DATwitterInstantDomain = @"TwitterInstant";
 
 
 @interface DATwitterInstantViewControllerTableViewController ()
-
+@property (strong, nonatomic) ACAccountStore *accountStore;
+@property (strong, nonatomic) ACAccountType *twitterAccountType;
 @end
 
 @implementation DATwitterInstantViewControllerTableViewController
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -43,13 +45,50 @@ static NSString * const RWTwitterInstantDomain = @"TwitterInstant";
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.accountStore = [[ACAccountStore alloc] init];
+    self.twitterAccountType = [self.accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    
     RAC(self.searchBar, barTintColor) = [self.searchBar.rac_textSignal map:^id(NSString *text) {
         return [self isValidSearchText:text] ? [UIColor lightGrayColor] : [UIColor redColor];
+    }];
+    
+    [[self requestAccessToTwitterSignal] subscribeNext:^(id x) {
+        NSLog(@"Access granted");
+    } error:^(NSError *error) {
+        NSLog(@"An error occured: %@", error);
     }];
 }
 
 - (BOOL)isValidSearchText:(NSString *)text {
     return text.length > 2;
+}
+
+- (RACSignal *)requestAccessToTwitterSignal {
+    // 1 - define the error
+    NSError *accessError = [NSError errorWithDomain:DATwitterInstantDomain
+                                               code:DATwitterInstantErrorAccessDenied
+                                           userInfo:nil];
+    
+    // 2 - create the signal
+    @weakify(self)
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        // 3 - request access to Twitter
+        @strongify(self)
+        [self.accountStore
+         requestAccessToAccountsWithType:self.twitterAccountType
+         options:nil
+         completion:^(BOOL granted, NSError *error) {
+             // 4 - handle the response
+             if (!granted) {
+                 [subscriber sendError:accessError];
+             } else {
+                 [subscriber sendNext:nil];
+                 [subscriber sendCompleted];
+             }
+         }];
+        return nil;
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning
