@@ -53,7 +53,7 @@ static NSString * const DATwitterInstantDomain = @"TwitterInstant";
     }];
 
     @weakify(self)
-    [[[[[self requestAccessToTwitterSignal]
+    [[[[[[self requestAccessToTwitterSignal]
     then:^RACSignal *{
         @strongify(self)
         return self.searchBar.rac_textSignal;
@@ -66,6 +66,7 @@ static NSString * const DATwitterInstantDomain = @"TwitterInstant";
         @strongify(self)
         return [self signalForSearchWithText:text];
     }]
+    deliverOn:[RACScheduler mainThreadScheduler]]
     subscribeNext:^(id x) {
         NSLog(@"%@", x);
     } error:^(NSError *error) {
