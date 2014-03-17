@@ -56,31 +56,12 @@
                     <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz"/>
                     <connections>
                         <segue destination="Ah7-4n-0Wa" kind="push" identifier="showLoginSegue" id="dOV-1T-XdS"/>
-                        <segue destination="FCg-EK-Bta" kind="push" identifier="showTwitterInstantSegue" id="3Gj-yQ-9Ri"/>
+                        <segue destination="X2T-VH-3J4" kind="push" identifier="showTwitterInstantSegue" id="ZXA-lE-Lr3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="491" y="64"/>
-        </scene>
-        <!--View Controller - Twitter Instant-->
-        <scene sceneID="9c7-KO-0wG">
-            <objects>
-                <viewController title="Twitter Instant" id="FCg-EK-Bta" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gck-fd-v4c"/>
-                        <viewControllerLayoutGuide type="bottom" id="JAC-F1-3EK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3r3-Vs-m0y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Twitter Instant" id="bLi-AW-O0S"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gqZ-vp-BbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1050" y="588"/>
+            <point key="canvasLocation" x="505" y="64"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -126,6 +107,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1050" y="-97"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="wUB-GB-Thf">
+            <objects>
+                <tableViewController id="X2T-VH-3J4" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NuN-BZ-XRp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="AMk-Md-taZ">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="X2T-VH-3J4" id="ji5-C4-CH1"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Zqf-ru-N9J">
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zqf-ru-N9J" id="zKN-io-hgc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="X2T-VH-3J4" id="qKO-xW-y1j"/>
+                            <outlet property="delegate" destination="X2T-VH-3J4" id="sFb-Tb-T6V"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4eo-x2-Zwe"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="zUu-BT-LUx" id="rau-G8-Won"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AzO-MJ-Ytk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="zUu-BT-LUx">
+                    <connections>
+                        <outlet property="delegate" destination="X2T-VH-3J4" id="fHx-zi-7ff"/>
+                        <outlet property="searchBar" destination="AMk-Md-taZ" id="vVs-jY-4ro"/>
+                        <outlet property="searchContentsController" destination="X2T-VH-3J4" id="w8v-Lp-tSO"/>
+                        <outlet property="searchResultsDataSource" destination="X2T-VH-3J4" id="QaW-y2-VxU"/>
+                        <outlet property="searchResultsDelegate" destination="X2T-VH-3J4" id="r3i-Su-13d"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1052" y="570"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
