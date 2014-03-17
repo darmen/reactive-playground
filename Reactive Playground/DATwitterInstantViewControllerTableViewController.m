@@ -9,6 +9,15 @@
 #import "DATwitterInstantViewControllerTableViewController.h"
 #import "UISearchBar+RAC.h"
 
+typedef NS_ENUM(NSInteger, DATwitterInstantError) {
+    DATwitterInstantErrorAccessDenied,
+    DATwitterInstantErrorNoTwitterAccounts,
+    DATwitterInstantErrorInvalidResponse
+};
+
+static NSString * const RWTwitterInstantDomain = @"TwitterInstant";
+
+
 @interface DATwitterInstantViewControllerTableViewController ()
 
 @end
