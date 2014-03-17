@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1B8FF6A918D7022C0051525C /* DATwitterInstantViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FF6A818D7022C0051525C /* DATwitterInstantViewControllerTableViewController.m */; };
 		1B8FF6AE18D70BBF0051525C /* UISearchBar+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FF6AD18D70BBF0051525C /* UISearchBar+RAC.m */; };
+		1B8FF6B118D73A640051525C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8FF6B018D73A640051525C /* Accounts.framework */; };
+		1B8FF6B318D73A680051525C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8FF6B218D73A680051525C /* Social.framework */; };
 		1BDD518718D60EEA009DE3DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518618D60EEA009DE3DF /* Foundation.framework */; };
 		1BDD518918D60EEA009DE3DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518818D60EEA009DE3DF /* CoreGraphics.framework */; };
 		1BDD518B18D60EEA009DE3DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518A18D60EEA009DE3DF /* UIKit.framework */; };
@@ -43,6 +45,8 @@
 		1B8FF6A818D7022C0051525C /* DATwitterInstantViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATwitterInstantViewControllerTableViewController.m; sourceTree = "<group>"; };
 		1B8FF6AD18D70BBF0051525C /* UISearchBar+RAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+RAC.m"; sourceTree = "<group>"; };
 		1B8FF6AF18D70E1A0051525C /* UISearchBar+RAC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+RAC.h"; sourceTree = "<group>"; };
+		1B8FF6B018D73A640051525C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		1B8FF6B218D73A680051525C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1BDD518318D60EEA009DE3DF /* Reactive Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reactive Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDD518618D60EEA009DE3DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BDD518818D60EEA009DE3DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8FF6B318D73A680051525C /* Social.framework in Frameworks */,
+				1B8FF6B118D73A640051525C /* Accounts.framework in Frameworks */,
 				1BDD518918D60EEA009DE3DF /* CoreGraphics.framework in Frameworks */,
 				1BDD518B18D60EEA009DE3DF /* UIKit.framework in Frameworks */,
 				1BDD518718D60EEA009DE3DF /* Foundation.framework in Frameworks */,
@@ -118,6 +124,8 @@
 		1BDD518518D60EEA009DE3DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B8FF6B218D73A680051525C /* Social.framework */,
+				1B8FF6B018D73A640051525C /* Accounts.framework */,
 				1BDD518618D60EEA009DE3DF /* Foundation.framework */,
 				1BDD518818D60EEA009DE3DF /* CoreGraphics.framework */,
 				1BDD518A18D60EEA009DE3DF /* UIKit.framework */,
