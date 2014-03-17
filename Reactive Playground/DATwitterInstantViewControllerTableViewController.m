@@ -57,7 +57,7 @@ static NSString * const DATwitterInstantDomain = @"TwitterInstant";
     }];
 
     @weakify(self)
-    [[[[[[self requestAccessToTwitterSignal]
+    [[[[[[[self requestAccessToTwitterSignal]
     then:^RACSignal *{
         @strongify(self)
         return self.searchBar.rac_textSignal;
@@ -66,6 +66,7 @@ static NSString * const DATwitterInstantDomain = @"TwitterInstant";
         @strongify(self)
         return [self isValidSearchText:text];
     }]
+    throttle:0.5]
     flattenMap:^RACStream *(NSString *text) {
         @strongify(self)
         return [self signalForSearchWithText:text];
