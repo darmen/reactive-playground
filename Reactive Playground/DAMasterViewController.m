@@ -42,7 +42,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,6 +56,10 @@
         
         case 1:
             cell.textLabel.text = @"2. Twitter Instant";
+            break;
+            
+        case 2:
+            cell.textLabel.text = @"2. Reachability";
             break;
             
         default:
@@ -78,6 +82,10 @@
         
         case 1:
             [self performSegueWithIdentifier:@"showTwitterInstantSegue" sender:nil];
+            break;
+            
+        case 2:
+            [self performSegueWithIdentifier:@"showReachabilitySegue" sender:nil];
             break;
             
         default:

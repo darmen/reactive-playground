@@ -12,6 +12,8 @@
 		1B8917B918DC06EB009A69CD /* UISearchBar+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8917B518DC06EB009A69CD /* UISearchBar+RAC.m */; };
 		1B8917BA18DC06EB009A69CD /* DADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8917B818DC06EB009A69CD /* DADetailViewController.m */; };
 		1B8917BE18DC070F009A69CD /* DATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8917BD18DC070F009A69CD /* DATableViewCell.m */; };
+		1B8917C218DC087A009A69CD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8917C118DC087A009A69CD /* Reachability.m */; };
+		1B8917C618DC08BC009A69CD /* DAReachabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8917C518DC08BC009A69CD /* DAReachabilityViewController.m */; };
 		1B8FF6B118D73A640051525C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8FF6B018D73A640051525C /* Accounts.framework */; };
 		1B8FF6B318D73A680051525C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8FF6B218D73A680051525C /* Social.framework */; };
 		1BDD518718D60EEA009DE3DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDD518618D60EEA009DE3DF /* Foundation.framework */; };
@@ -53,6 +55,10 @@
 		1B8917B818DC06EB009A69CD /* DADetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADetailViewController.m; sourceTree = "<group>"; };
 		1B8917BC18DC070F009A69CD /* DATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATableViewCell.h; sourceTree = "<group>"; };
 		1B8917BD18DC070F009A69CD /* DATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATableViewCell.m; sourceTree = "<group>"; };
+		1B8917C018DC087A009A69CD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		1B8917C118DC087A009A69CD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1B8917C418DC08BC009A69CD /* DAReachabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAReachabilityViewController.h; sourceTree = "<group>"; };
+		1B8917C518DC08BC009A69CD /* DAReachabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAReachabilityViewController.m; sourceTree = "<group>"; };
 		1B8FF6B018D73A640051525C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1B8FF6B218D73A680051525C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1BDD518318D60EEA009DE3DF /* Reactive Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reactive Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +127,7 @@
 		1B8917B218DC06EB009A69CD /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				1B8917BF18DC087A009A69CD /* Reachability */,
 				1B8917BB18DC070F009A69CD /* DATableViewCell */,
 				1B8917B318DC06EB009A69CD /* UISearchBar+RAC */,
 			);
@@ -152,6 +159,24 @@
 				1B8917BD18DC070F009A69CD /* DATableViewCell.m */,
 			);
 			path = DATableViewCell;
+			sourceTree = "<group>";
+		};
+		1B8917BF18DC087A009A69CD /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				1B8917C018DC087A009A69CD /* Reachability.h */,
+				1B8917C118DC087A009A69CD /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		1B8917C318DC0898009A69CD /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				1B8917C418DC08BC009A69CD /* DAReachabilityViewController.h */,
+				1B8917C518DC08BC009A69CD /* DAReachabilityViewController.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		1BDD517A18D60EEA009DE3DF = {
@@ -191,7 +216,7 @@
 		1BDD518C18D60EEA009DE3DF /* Reactive Playground */ = {
 			isa = PBXGroup;
 			children = (
-				1B8917B218DC06EB009A69CD /* Custom */,
+				1B8917C318DC0898009A69CD /* Reachability */,
 				1B8917B618DC06EB009A69CD /* Login */,
 				1B8917AB18DC06A7009A69CD /* TwitterInstant */,
 				1BDD51BE18D627CB009DE3DF /* API */,
@@ -202,6 +227,7 @@
 				1BDD519C18D60EEA009DE3DF /* DAMasterViewController.m */,
 				1BDD51A118D60EEA009DE3DF /* Images.xcassets */,
 				1BDD518D18D60EEA009DE3DF /* Supporting Files */,
+				1B8917B218DC06EB009A69CD /* Custom */,
 			);
 			path = "Reactive Playground";
 			sourceTree = "<group>";
@@ -381,7 +407,9 @@
 				1BDD519318D60EEA009DE3DF /* main.m in Sources */,
 				1B8917B118DC06A7009A69CD /* DATwitterInstantViewControllerTableViewController.m in Sources */,
 				1B8917BA18DC06EB009A69CD /* DADetailViewController.m in Sources */,
+				1B8917C218DC087A009A69CD /* Reachability.m in Sources */,
 				1B8917BE18DC070F009A69CD /* DATableViewCell.m in Sources */,
+				1B8917C618DC08BC009A69CD /* DAReachabilityViewController.m in Sources */,
 				1B8917B018DC06A7009A69CD /* DATweet.m in Sources */,
 				1BDD519718D60EEA009DE3DF /* DAAppDelegate.m in Sources */,
 				1B8917B918DC06EB009A69CD /* UISearchBar+RAC.m in Sources */,

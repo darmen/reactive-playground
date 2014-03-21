@@ -57,6 +57,7 @@
                     <connections>
                         <segue destination="Ah7-4n-0Wa" kind="push" identifier="showLoginSegue" id="dOV-1T-XdS"/>
                         <segue destination="X2T-VH-3J4" kind="push" identifier="showTwitterInstantSegue" id="ZXA-lE-Lr3"/>
+                        <segue destination="vwV-If-UVI" kind="push" identifier="showReachabilitySegue" id="5fh-cc-XTu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
@@ -106,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="-97"/>
+            <point key="canvasLocation" x="1044" y="-737"/>
         </scene>
         <!--Twitter Instant View Controller Table View Controller - Twitter Instant-->
         <scene sceneID="wUB-GB-Thf">
@@ -176,7 +177,38 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1052" y="570"/>
+            <point key="canvasLocation" x="1044" y="78"/>
+        </scene>
+        <!--Reachability View Controller - Reachability-->
+        <scene sceneID="FH9-We-OOa">
+            <objects>
+                <viewController id="vwV-If-UVI" customClass="DAReachabilityViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K5Q-TP-Ulk"/>
+                        <viewControllerLayoutGuide type="bottom" id="E62-Bx-8Jn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7vu-2u-S4W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Network Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-Xa-ImJ">
+                                <rect key="frame" x="38" y="238" width="244" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reachability" id="6kl-Jb-1rW"/>
+                    <connections>
+                        <outlet property="reachabilityStatusLabel" destination="h0d-Xa-ImJ" id="rbG-HY-dW2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HV4-un-0nQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="856"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
