@@ -42,7 +42,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -59,7 +59,11 @@
             break;
             
         case 2:
-            cell.textLabel.text = @"2. Reachability";
+            cell.textLabel.text = @"3. Reachability";
+            break;
+            
+        case 3:
+            cell.textLabel.text = @"3. SoundCloud";
             break;
             
         default:
@@ -86,6 +90,10 @@
             
         case 2:
             [self performSegueWithIdentifier:@"showReachabilitySegue" sender:nil];
+            break;
+            
+        case 3:
+            [self performSegueWithIdentifier:@"showSoundCloudSegue" sender:nil];
             break;
             
         default:

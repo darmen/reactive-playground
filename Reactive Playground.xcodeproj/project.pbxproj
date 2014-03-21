@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B13AEB818DC916800F0A433 /* DASoundCloudTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B13AEB718DC916800F0A433 /* DASoundCloudTableViewController.m */; };
 		1B8917B018DC06A7009A69CD /* DATweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8917AD18DC06A7009A69CD /* DATweet.m */; };
 		1B8917B118DC06A7009A69CD /* DATwitterInstantViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8917AF18DC06A7009A69CD /* DATwitterInstantViewControllerTableViewController.m */; };
 		1B8917B918DC06EB009A69CD /* UISearchBar+RAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8917B518DC06EB009A69CD /* UISearchBar+RAC.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B13AEB618DC916800F0A433 /* DASoundCloudTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DASoundCloudTableViewController.h; sourceTree = "<group>"; };
+		1B13AEB718DC916800F0A433 /* DASoundCloudTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DASoundCloudTableViewController.m; sourceTree = "<group>"; };
 		1B8917AC18DC06A7009A69CD /* DATweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATweet.h; sourceTree = "<group>"; };
 		1B8917AD18DC06A7009A69CD /* DATweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATweet.m; sourceTree = "<group>"; };
 		1B8917AE18DC06A7009A69CD /* DATwitterInstantViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATwitterInstantViewControllerTableViewController.h; sourceTree = "<group>"; };
@@ -110,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B13AEB218DC911300F0A433 /* SoundCloud */ = {
+			isa = PBXGroup;
+			children = (
+				1B13AEB618DC916800F0A433 /* DASoundCloudTableViewController.h */,
+				1B13AEB718DC916800F0A433 /* DASoundCloudTableViewController.m */,
+			);
+			path = SoundCloud;
+			sourceTree = "<group>";
+		};
 		1B8917AB18DC06A7009A69CD /* TwitterInstant */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +215,7 @@
 		1BDD518C18D60EEA009DE3DF /* Reactive Playground */ = {
 			isa = PBXGroup;
 			children = (
+				1B13AEB218DC911300F0A433 /* SoundCloud */,
 				1B8917C318DC0898009A69CD /* Reachability */,
 				1B8917B618DC06EB009A69CD /* Login */,
 				1B8917AB18DC06A7009A69CD /* TwitterInstant */,
@@ -394,6 +407,7 @@
 				1BDD519318D60EEA009DE3DF /* main.m in Sources */,
 				1B8917B118DC06A7009A69CD /* DATwitterInstantViewControllerTableViewController.m in Sources */,
 				1B8917BA18DC06EB009A69CD /* DADetailViewController.m in Sources */,
+				1B13AEB818DC916800F0A433 /* DASoundCloudTableViewController.m in Sources */,
 				1B8917BE18DC070F009A69CD /* DATableViewCell.m in Sources */,
 				1B8917C618DC08BC009A69CD /* DAReachabilityViewController.m in Sources */,
 				1B8917B018DC06A7009A69CD /* DATweet.m in Sources */,

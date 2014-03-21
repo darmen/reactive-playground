@@ -58,6 +58,7 @@
                         <segue destination="Ah7-4n-0Wa" kind="push" identifier="showLoginSegue" id="dOV-1T-XdS"/>
                         <segue destination="X2T-VH-3J4" kind="push" identifier="showTwitterInstantSegue" id="ZXA-lE-Lr3"/>
                         <segue destination="vwV-If-UVI" kind="push" identifier="showReachabilitySegue" id="5fh-cc-XTu"/>
+                        <segue destination="RNc-l1-ho0" kind="push" identifier="showSoundCloudSegue" id="oUi-q0-ZbJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
@@ -209,6 +210,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HV4-un-0nQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044" y="856"/>
+        </scene>
+        <!--Sound Cloud Table View Controller - SoundCloud-->
+        <scene sceneID="bug-UZ-DcN">
+            <objects>
+                <tableViewController id="RNc-l1-ho0" customClass="DASoundCloudTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="q1m-A6-jUM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Qxg-97-YZP">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qxg-97-YZP" id="HMp-pQ-B7n">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RNc-l1-ho0" id="fTO-0o-4H0"/>
+                            <outlet property="delegate" destination="RNc-l1-ho0" id="dMD-cB-atZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SoundCloud" id="v26-7o-tvo"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMV-9B-qs8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="1594"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
