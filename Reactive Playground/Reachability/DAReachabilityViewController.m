@@ -28,45 +28,43 @@
 {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-
     self.reachability = [Reachability reachabilityForInternetConnection];
-    [self.reachability startNotifier];
+    
+    [[[self reachabilitySignal]
+    deliverOn:[RACScheduler mainThreadScheduler]]
+    subscribeNext:^(Reachability *reachability) {
+        [self updateInterfaceWithReachability:self.reachability];
+    }];
     
     [self updateInterfaceWithReachability:self.reachability];
 }
 
+- (RACSignal *)reachabilitySignal
+{
+    @weakify(self)
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self);
+        self.reachability.reachableBlock = ^(Reachability*reachability) {
+            [subscriber sendNext:reachability];
+        };
+        
+        self.reachability.unreachableBlock = ^(Reachability*reachability) {
+            [subscriber sendNext:reachability];
+        };
+        
+        [self.reachability startNotifier];
+        return nil;
+    }];
+//    [[RACReplaySubject subject] subscribeNext:^(Reachability *reachability) {
+//        @strongify(self);
+//        [self updateInterfaceWithReachability:reachability];
+//    }];
+}
+
 - (void)updateInterfaceWithReachability:(Reachability *)reachability
 {
-    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
-    
-    switch (networkStatus) {
-        case NotReachable:
-        {
-            self.reachabilityStatusLabel.text = @"Not reachable";
-            break;
-        }
-            
-        case ReachableViaWWAN:
-        {
-            self.reachabilityStatusLabel.text = @"Reachable via WWAN";
-            break;
-        }
-        case ReachableViaWiFi:
-        {
-            self.reachabilityStatusLabel.text = @"Reachable via WiFi";
-            break;
-        }
-    }
+    self.reachabilityStatusLabel.text = reachability.isReachable ? @"Reachable" : @"Not reachable";
 }
-
-- (void)reachabilityChanged:(NSNotification *)notification
-{
-	Reachability *reachability = [notification object];
-	NSParameterAssert([reachability isKindOfClass:[Reachability class]]);
-    [self updateInterfaceWithReachability:reachability];
-}
-
 
 - (void)didReceiveMemoryWarning
 {
